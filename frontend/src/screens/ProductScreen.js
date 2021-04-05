@@ -29,7 +29,7 @@ function ProductScreen({ match, history }) {
             { loading ? <Loader />
                 : error ? <Message variant="danger" >{error}</Message>
                     :
-                    <Row>
+                    <Row style={{"display":"flex", "flexWrap":"wrap"}}>
                         <Col md={5}>
                             <Image src={product.image} alt={product.name} fluid />
                         </Col>
