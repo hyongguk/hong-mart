@@ -20,12 +20,16 @@ from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
 
-urlpatterns = [
-    path('api/', include('base.urls')),
-    #path('polls/', include('polls.urls')),
-    path('admin/', admin.site.urls),
-    
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 
+urlpatterns = [
+    path('admin/', admin.site.urls),    
+    path('api/products/', include('base.urls.product_urls')),
+    path('api/users/', include('base.urls.user_urls')),
+    path('api/orders/', include('base.urls.order_urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
