@@ -4,11 +4,18 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from base.models import Product
+from base.models import Product, Review
 from base.products import products
 from base.serializers import ProductSerializer
 
 from rest_framework import status
+
+
+@api_view(['GET'])
+def getTopProducts(request):
+    products = Product.objects.filter(rating__gte=4).order_by('-rating')[0:5]
+    serializer = ProductSerializer(products, many=True)
+    return Response(serializer.data)
 
 
 @api_view(['GET'])

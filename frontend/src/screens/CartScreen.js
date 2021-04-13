@@ -55,7 +55,7 @@ export default function CartScreen({ match, location, history }) {
                                         <Link to={`/product/${item.product}`}>{item.name}</Link>
                                     </Col>
                                     <Col md={2}>
-                                        {`$ ${item.price}`}
+                                        {`${item.price} yen`}
                                     </Col>
                                     <Col md={3}>
                                         <Form.Control

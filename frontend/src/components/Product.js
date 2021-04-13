@@ -12,19 +12,19 @@ function Product({ product }) {
             </Link>
             <Card.Body>
                 <Link to={`/product/${product._id}`}>
-                    <Card.Title as="div">
+                    <Card.Title as="div" style={{height:"2rem"}}>
                         <strong>{product.name}</strong>
                     </Card.Title>
                 </Link>
 
                 <Card.Text as="div">
                     <div className="my-3">
-                        <Rating value={product.rating} text={`${product.numReviews} reviews`} color={'#f8e825'}></Rating>
+                        <Rating value={product.rating} text={`${product.numReviews} reviews`} color={'#5a5c58'}></Rating>
                     </div>
                 </Card.Text>
 
-                <Card.Text as="h3">
-                    ${product.price}
+                <Card.Text>
+                    {product.price} yen
                 </Card.Text>
             </Card.Body>
         </Card>
