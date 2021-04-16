@@ -25,8 +25,8 @@ function ProductCarousel() {
                         <Carousel.Item key={product._id} className=''>
                             <Link to={`/product/${product._id}`}>
                                 <Image src={product.image} alt={product.name} fluid className='d-block'/>
-                                <Carousel.Caption className='carousel.caption'>
-                                    <h4>{product.name} (¥{product.price})</h4>
+                                <Carousel.Caption className='carousel.caption text-muted' style={{top: "2rem"}} >
+                                    <h6>{product.name} (¥{product.price})</h6>
                                 </Carousel.Caption>
                             </Link>
                         </Carousel.Item>

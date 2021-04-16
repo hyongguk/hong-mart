@@ -27,14 +27,14 @@ function HomeScreen({ history }) {
         <div>
             {!keyword && <ProductCarousel />}
 
-            <h1>Latest Products</h1>
+            <h1 className='mt-5 pb-0'>Latest Products</h1>
             { loading ? <Loader />
                 : error ? <Message variant="danger" >{error}</Message>
                     :
                     <div>
                         <Row>
                             {products.map(product => (
-                                <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
+                                <Col key={product._id} sm={12} md={6} lg={4} xl={4}>
                                     <Product product={product} />
                                 </Col>
                             ))}
