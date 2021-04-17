@@ -182,5 +182,10 @@ A completely customized eCommerce / shopping cart application.
 <br/>
 
 # 🚀How It Works
+<br/>
+
+## Database schema
+
+<img src="./assets/database_schema.png" />
 
 
