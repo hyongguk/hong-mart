@@ -1,3 +1,5 @@
+
+
 # 🎁 HONGMART
 A completely customized eCommerce / shopping cart application.
 * Full featured shopping cart
@@ -181,11 +183,30 @@ A completely customized eCommerce / shopping cart application.
 <br/>
 <br/>
 
-# 🚀How It Works
+# 🚀 Back End Sturucture
 <br/>
 
 ## Database schema
 
 <img src="./assets/database_schema.png" />
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+## REST API
+
+<img src="./assets/api/../api:users.png" />
+<br/>
+<br/>
+<br/>
+<br/>
+<img src="./assets/api/../api:products.png" />
+<br/>
+<br/>
+<br/>
+<br/>
+<img src="./assets/api/../api:orders.png" />
 
 
